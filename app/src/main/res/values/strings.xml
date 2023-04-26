@@ -4,4 +4,26 @@
     <string name="count_initial_value">0</string>
     <string name="button_label_count">count</string>
     <string name="toast_message">Hello Toast!</string>
+    <string name="article_title">what is cost function in neural network?</string>
+    <string name="article_subtitle">test article subtitle</string>
+    <string name="article_text">https://medium.com/@zeeshanmulla/cost-activation-loss-function-neural-network-deep-learning-what-are-these-91167825a4de
+        this function is known as the L2 loss. Training the hypothetical model we stated above would be the process of finding the θ that minimizes this sum.\n
+
+-An activation function transforms the shape/representation of the data going into it. A simple example could be max(0, xi),
+        a function which outputs 0 if the input xi is negative or xi if the input xi is positive. This function is known as the “ReLU” or “Rectified Linear Unit” activation function. The choice of which function(s) are best for a specific problem using a particular neural architecture is still under a lot of discussions. However, these representations are essential for making high-dimensional data linearly separable, which is one of the many uses of a neural network.
+
+What is the difference between cost function and loss function?
+As mentioned by others, cost and loss functions are synonymous
+        (some people also call it error function). The more general scenario is to define an objective function first, which you want to optimize. This objective function could be to
+
+- maximize the posterior probabilities (e.g., naive Bayes)
+- maximize a fitness function (genetic programming)
+- maximize the total reward/value function (reinforcement learning)
+- maximize information gain/minimize child node impurities (CART decision tree classification)
+- minimize a mean squared error cost (or loss) function (CART, decision tree regression, linear regression, adaptive linear neurons, …
+- maximize log-likelihood or minimize cross-entropy loss (or cost) function
+- minimize hinge loss (support vector machine)
+
+The loss function (or error) is for a single training example,
+        while the cost function is over the entire training set (or mini-batch for mini-batch gradient descent).</string>
 </resources>

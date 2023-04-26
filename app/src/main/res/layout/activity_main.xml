@@ -4,49 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_toast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="showToast"
-        android:text="@string/button_label_toast"
-        android:textColor="@android:color/white" />
-
     <TextView
-        android:id="@+id/show_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#FFFF00"
-        android:text="@string/count_initial_value"
-        android:textAlignment="center"
-        android:textSize="160sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/button_toast"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/button_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="countUp"
-        android:text="@string/button_label_count"
+        android:id="@+id/article_heading"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/article_title"
+        android:textAppearance=
+            "@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@android:color/white"
-        android:layout_below="@+id/show_count"
-        android:layout_centerHorizontal="true"/>
+         />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:id="@+id/article_subheading"
+                android:layout_below="@id/article_heading"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_subtitle"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAppearance=
+                    "@android:style/TextAppearance.DeviceDefault" />
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="#D6D7D7"
+                android:text="ADD COMMENT"
+                android:textColor="@color/black"
+                android:layout_margin="6dp"></Button>
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
