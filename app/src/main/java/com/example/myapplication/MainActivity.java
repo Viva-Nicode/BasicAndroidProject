@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         setContentView(R.layout.activity_main);
@@ -28,6 +32,40 @@ public class MainActivity extends AppCompatActivity {
         mReplyTextView = findViewById(R.id.text_message_reply);
         onActivityResult(-1, 1, intent);
     }
+
+    @Override
+    protected void onStart() {
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onStart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onStop");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onResume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
 
 
     public void launchSecondActivity(View view) {
